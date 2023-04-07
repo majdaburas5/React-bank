@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.deposit {
+  background-color: #00b894;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.withdraw {
+  background-color: #d63031;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.custom-form-group {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.custom-form-container {
+  height: 50vh;
+}

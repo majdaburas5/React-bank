@@ -1,0 +1,62 @@
+.table-container {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.selectMonth {
+  margin-right: 1px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  color: black;
+}
+
+.table th {
+  background-color: #eee;
+  font-weight: bold;
+  padding: 23px;
+}
+
+.table td.amount {
+  font-family: monospace;
+  color: black !important;
+}
+
+.table td.deposit {
+  background-color: green;
+}
+
+.table td.withdraw {
+  background-color: red;
+}
+
+.table td.category {
+  font-style: italic;
+}
+
+.table td.delete {
+  text-align: center;
+}
+
+.table td.delete button {
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.date {
+  width: 120px;
+}
