@@ -20,7 +20,7 @@ function App() {
   }
   useEffect(() => {
     TransactionsFromDB();
-  }, []);
+  }, [transactions]);
 
   function deleteTransaction(id) {
     axios.delete(`${URL}/deleteTransaction/${id}`);
