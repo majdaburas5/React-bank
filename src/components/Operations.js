@@ -31,6 +31,7 @@ export default function Operations({ addTransaction }) {
       progress: undefined,
       theme: "light",
     });
+
     let amount = amountValue;
     if (buttonType === "withdraw") {
       amount *= -1;

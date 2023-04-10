@@ -46,12 +46,12 @@ function App() {
   }
 
   const amoutEachCategory = sumByCategory().then((result) => {
-    const categoriesAmounts = result.data.reduce((acc, curr) => {
-      acc.push({
-        category: curr._id,
-        amount: curr.total_amount,
+    const categoriesAmounts = result.data.reduce((item, current) => {
+      item.push({
+        category: current._id,
+        amount: current.total_amount,
       });
-      return acc;
+      return item;
     }, []);
 
     return categoriesAmounts;
