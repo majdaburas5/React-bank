@@ -42,16 +42,26 @@ router.delete("/deleteTransaction/:transaction", function (req, res) {
   );
 });
 
-router.get("/sumByCategory", function (req, res, next) {
-  Transaction.aggregate([
-    { $group: { _id: "$category", total_amount: { $sum: "$amount" } } },
-  ]).then((total) => res.send(total));
+router.get("/sumByCategory", function (req, res) {
+  try {
+    Transaction.aggregate([
+      { $group: { _id: "$category", total_amount: { $sum: "$amount" } } },
+    ]).then((total) => res.send(total));
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("error");
+  }
 });
 
-router.get("/sumAmount", function (req, res, next) {
-  Transaction.aggregate([
-    { $group: { _id: "balance", total_amount: { $sum: "$amount" } } },
-  ]).then((total) => res.send(total));
+router.get("/sumAmount", function (req, res) {
+  try {
+    Transaction.aggregate([
+      { $group: { _id: "balance", total_amount: { $sum: "$amount" } } },
+    ]).then((total) => res.send(total));
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("error");
+  }
 });
 
 module.exports = router;
